@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ur epic Periodic Table Non-Metal Information Finder</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://pyscript.net/releases/2023.11.1/core.css">
+    <script type="module" src="https://pyscript.net/releases/2023.11.1/core.js"></script>
+
+    <style>
+        body {
+            background-color: #0d081a;
+            color: #f3f0ff;
+            font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .main-container {
+            max-width: 480px;
+            width: 100%;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .app-title {
+            color: #d8b4fe;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .app-subtitle {
+            color: #a855f7;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+
+        .card-custom {
+            background-color: #18112c;
+            border: 1px solid #3b2063;
+            border-radius: 12px;
+            padding: 24px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+        }
+
+        .form-control-custom {
+            background-color: #0f0a1c;
+            border: 1px solid #2d184c;
+            color: #e9d5ff;
+            padding: 12px 16px;
+            border-radius: 8px;
+        }
+
+        .form-control-custom:focus {
+            background-color: #0f0a1c;
+            border-color: #9333ea;
+            color: #ffffff;
+            box-shadow: 0 0 0 0.25rem rgba(147, 51, 234, 0.25);
+        }
+
+        .form-control-custom::placeholder {
+            color: #6b5b95;
+        }
+
+        .btn-purple {
+            background: linear-gradient(135deg, #7e22ce 0%, #9333ea 100%);
+            border: none;
+            color: #ffffff;
+            font-weight: 600;
+            padding: 12px;
+            border-radius: 8px;
+            letter-spacing: 1px;
+            transition: all 0.2s ease;
+        }
+
+        .btn-purple:hover {
+            background: linear-gradient(135deg, #6b21a8 0%, #7e22ce 100%);
+            color: #ffffff;
+        }
+
+        .result-box {
+            background-color: #150d27;
+            border: 1px solid #3b2063;
+            border-left: 4px solid #a855f7;
+            border-radius: 8px;
+            padding: 16px;
+        }
+
+        .result-text {
+            color: #e9d5ff;
+            font-size: 1rem;
+            margin-bottom: 8px;
+        }
+
+        footer {
+            background-color: #120a22;
+            border-top: 1px solid #281442;
+            color: #8b5cf6;
+            text-align: center;
+            padding: 14px 0;
+            font-size: 0.85rem;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="main-container">
+
+        <div class="text-center mb-4">
+            <h2 class="app-title mb-1">AWESOME NON-METAL FINDER</h2>
+            <div class="app-subtitle">Periodic Table Information thing</div>
+        </div>
+
+        <div class="card-custom mb-4">
+            <div class="mb-3">
+                <input type="text" id="element-symbol" class="form-control form-control-custom" placeholder="It's case sensitive hahaaaa">
+            </div>
+            <button id="btn-submit" class="btn btn-purple w-100">SEARCH ELEMENT NOW!!!!</button>
+        </div>
+
+        <div class="result-box mb-3">
+            <p class="result-text"><b>Element Symbol:</b> <span id="res-symbol">-</span></p>
+            <p class="result-text"><b>Element Name:</b> <span id="res-name">-</span></p>
+            <p class="result-text"><b>Atomic Number:</b> <span id="res-number">-</span></p>
+            <p class="result-text mb-0"><b>Atomic Mass:</b> <span id="res-mass">-</span></p>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2026 Science Dept &bull; Periodic Table epic tool
+    </footer>
+
+    <script type="py" src="main.py" config='{"packages": []}'></script>
+
+</body>
+</html>
